@@ -4,36 +4,36 @@ public class CadastroDeLivros {
     public static void main(String[] args){
         
         Autor autor = new Autor();
-        autor.nome = "Rodrigo Turini";
-        autor.email = "rodrigo.turini@caelum.com.br";
-        autor.cpf = "123.456.789.10";
+        autor.setNome("Rodrigo Turini");
+        autor.setEmail("rodrigo.turini@caelum.com.br");
+        autor.setCPF("123.456.789.10");
         
-        Livro livro = new Livro();
+        Livro livro = new Livro(autor);
         
-        livro.nome = "Java 8 Prático";
-        livro.descricao = "Novos recursos da linguagem";
-        livro.valor = 59.90;
-        livro.isbn = "978-85-66250-46-6";
+        livro.setNome("Java 8 Prático");
+        livro.setDescricao("Novos recursos da linguagem");
+        livro.adicionarValor(59.90);
+        livro.setISBN("978-85-66250-46-6");
         
-        livro.autor = autor;
+        livro.setAutor(autor);
         
         livro.MostrarDetalhes();
         
         ///////////////////////////////////////////////////////
         
         Autor outroAutor = new Autor();
-        outroAutor.nome = "Paulo Silveira";
-        outroAutor.email = "paulo.silveira@caelum.com.br";
-        outroAutor.cpf = "123.456.789.11";
+        outroAutor.setNome("Paulo Silveira");
+        outroAutor.setEmail("paulo.silveira@caelum.com.br");
+        outroAutor.setCPF("123.456.789.11");
         
-        Livro outroLivro = new Livro();
+        Livro outroLivro = new Livro(outroAutor);
         
-        outroLivro.nome = "Lógica de Programação";
-        outroLivro.descricao = "Crie seus primeiros programas";
-        outroLivro.valor = 59.90;
-        outroLivro.isbn = "978-85-66250-22-0";
+        outroLivro.setNome("Lógica de Programação");
+        outroLivro.setDescricao("Crie seus primeiros programas");
+        outroLivro.adicionarValor(59.90);
+        outroLivro.setISBN("978-85-66250-22-0");
         
-        outroLivro.autor = outroAutor;
+        outroLivro.setAutor(outroAutor);
         
         outroLivro.MostrarDetalhes();
         
