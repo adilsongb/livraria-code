@@ -6,6 +6,7 @@ public class Livro {
     private double valor; //com "private" apenas a class livro pode usar essa variavel
     private String isbn;
     private Autor autor;
+    private boolean impresso;
     
     void MostrarDetalhes(){
         
@@ -25,7 +26,7 @@ public class Livro {
         
         if (porcentagem > 0.3) {
             return false;
-        }
+        } 
         this.valor -= this.valor * porcentagem;
         return true;
     }
@@ -52,9 +53,8 @@ public class Livro {
     
         this.autor = autor;
         this.isbn = "000-00-00000-00-0";
+        this.impresso = true;
     }
-    
-    public Livro(){}
     
     ///////////////////////////////////////// Getters and Setters
     
