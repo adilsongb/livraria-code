@@ -6,8 +6,11 @@ public class RegrasDeDesconto {
         Autor autor = new Autor();
         autor.setNome("Rodrigo Turini");
         
-        Livro livro = new Livro(autor);
+        Livro livro = new LivroFisico(autor);
         livro.setValor(59.90);
+        
+        Livro miniLivro = new MiniLivro(autor);
+        miniLivro.setValor(39.90);
         
         Ebook ebook = new Ebook(autor);
         ebook.setValor(29.90);

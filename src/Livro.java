@@ -1,5 +1,5 @@
 
-public class Livro {
+public abstract class Livro {
     //Atributos:
     private String nome;
     private String descricao;
